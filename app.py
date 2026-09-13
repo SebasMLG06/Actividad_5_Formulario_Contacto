@@ -104,7 +104,7 @@ def guardar_contacto(db_path, nombre, correo, asunto, mensaje, entorno):
     conn.close()
 
 
-# Instancia usada por 'flask run', gunicorn, etc. Usa APP_ENV del sistema.
+# Instancia usada por "flask run", gunicorn, etc. Usar APP_ENV del sistema en este caso.
 app = create_app()
 
 if __name__ == "__main__":

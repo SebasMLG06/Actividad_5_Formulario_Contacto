@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Contacto La Salle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Formulario de Contacto La Salle</h1>
+            <span class="badge badge-{{ entorno|lower }}">Ambiente: {{ entorno }}</span>
+        </header>
+
+        {% with mensajes = get_flashed_messages(with_categories=true) %}
+            {% if mensajes %}
+                <div class="mensajes">
+                    {% for categoria, texto in mensajes %}
+                        <p class="alerta alerta-{{ categoria }}">{{ texto }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('contacto') }}" method="POST" novalidate>
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" value="{{ nombre or '' }}">
+
+            <label for="correo">Correo electrónico *</label>
+            <input type="text" id="correo" name="correo" value="{{ correo or '' }}">
+
+            <label for="asunto">Asunto *</label>
+            <input type="text" id="asunto" name="asunto" value="{{ asunto or '' }}">
+
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="5">{{ mensaje or '' }}</textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <footer>
+            <small>Institución La Salle &mdash; Actividad 4</small>
+        </footer>
+    </div>
+</body>
+</html>

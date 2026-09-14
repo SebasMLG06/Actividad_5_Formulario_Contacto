@@ -1,6 +1,6 @@
 ## 1. Requisitos
 
-- Python 3.10 o superior.
+- Python 3.14 o superior.
 - pip.
 
 ## 2. Instalación (una sola vez)

@@ -1,3 +1,6 @@
+## PRE-INFORMACION
+Se agregaron nuevos archivos en la carpeta `Actividad_8_pruebas_e_imagenes`, esta carpeta contiene las capturas de pantalla de cada prueba que se realizo, asi mismo como los archivos .py que se utilizaron para hacer cada prueba. Estos archivos .py deben ser copitados y pegados en la carpeta tests/ para ser funcionales. Decidi dejar separados estos archivos para tener cada actividad por aparte, pudiendose probar la original primero y luego las pruebas si asi se desea.
+
 ## 1. Requisitos
 
 - Python 3.14 o superior.
